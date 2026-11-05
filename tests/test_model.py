@@ -17,6 +17,7 @@ def test_tiny_model_generation_preserves_prompt_tokens_and_training_mode():
         pad_token_id = 0
 
         def __call__(self, prompt, **kwargs):
+            assert kwargs["return_token_type_ids"] is False
             return Inputs(input_ids=torch.tensor([[3, 4]]), attention_mask=torch.ones(1, 2, dtype=torch.long))
 
         def decode(self, ids, **kwargs):

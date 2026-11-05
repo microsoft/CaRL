@@ -46,7 +46,8 @@ class HFGenerator:
         if type(max_new_tokens) is not int or max_new_tokens < 1:
             raise ValueError("Generation budget must be a positive integer")
         inputs = self.tokenizer(prompt, return_tensors="pt", truncation=False,
-                                add_special_tokens=False).to(next(self.policy.parameters()).device)
+                                add_special_tokens=False, return_token_type_ids=False).to(
+                                    next(self.policy.parameters()).device)
         length = inputs["input_ids"].shape[1]
         limit = self.policy.config.max_position_embeddings
         if not length or length + max_new_tokens > limit:
