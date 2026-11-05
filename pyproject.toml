@@ -6,12 +6,27 @@ build-backend = "setuptools.build_meta"
 name = "carl"
 version = "0.1.0"
 description = "Competence-aware reinforcement learning for LLM tool use"
+authors = [
+    {name = "Abhijit Kumar"},
+    {name = "Zoey Wu"},
+    {name = "Mohit Suley"},
+]
 requires-python = ">=3.11"
 license = "MIT"
 dependencies = []
 
 [project.optional-dependencies]
-test = ["pytest>=8"]
+learning = ["torch>=2.1"]
+model = ["torch>=2.1", "transformers>=4.45"]
+retrieval = ["pyserini>=0.25"]
+test = ["pytest>=8", "torch>=2.1", "transformers>=4.45"]
+data = ["sentence-transformers>=3", "scikit-learn>=1.4"]
+vllm = ["vllm>=0.7,<0.9"]
+
+[project.urls]
+Homepage = "https://aka.ms/know-when-to-ask"
+Repository = "https://github.com/microsoft/CaRL"
+Paper = "https://arxiv.org/abs/2605.27788"
 
 [tool.setuptools.packages.find]
 where = ["."]

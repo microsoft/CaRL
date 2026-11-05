@@ -1,0 +1,14 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  cpu:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[test,model]"
+      - run: python -m pytest -q
+      - run: docker build -t carl-python docker
+      - run: python -c "from carl.sandbox.trusted import TrustedExecutor; r=TrustedExecutor(container_image='carl-python')('print(2+2)'); assert r.status=='success' and r.stdout=='4\n', r"

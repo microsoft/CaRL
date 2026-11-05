@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "Please cite the CARL paper when using this code."
+title: "Knowing When to Ask: Segment-Level Credit Assignment for LLM Tool Use"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Kumar
+    given-names: Abhijit
+  - family-names: Wu
+    given-names: Zoey
+  - family-names: Suley
+    given-names: Mohit
+license: MIT
+repository-code: "https://github.com/microsoft/CaRL"
+url: "https://aka.ms/know-when-to-ask"
+preferred-citation:
+  type: article
+  title: "Knowing When to Ask: Segment-Level Credit Assignment for LLM Tool Use"
+  authors:
+    - family-names: Kumar
+      given-names: Abhijit
+    - family-names: Wu
+      given-names: Zoey
+    - family-names: Suley
+      given-names: Mohit
+  year: 2026
+  journal: arXiv
+  doi: "10.48550/arXiv.2605.27788"
+  url: "https://arxiv.org/abs/2605.27788"

@@ -1,0 +1,16 @@
+{
+  "method": "carl",
+  "rollout_batch_prompts": 256,
+  "n_samples_per_prompt": 5,
+  "ppo_mini_batch": 64,
+  "ppo_epochs": 4,
+  "eps_clip": 0.2,
+  "gamma": 1.0,
+  "gae_lambda": 0.0,
+  "vf_coef": 0.5,
+  "ent_coef": 0.001,
+  "kl_coef": 0.001,
+  "actor_lr": 1e-6,
+  "critic_value_head_lr": 5e-6,
+  "warmup_steps": 100
+}
