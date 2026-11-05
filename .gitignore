@@ -6,5 +6,5 @@ build/
 dist/
 .venv/
 .env
-data/
+/data/
 outputs/
