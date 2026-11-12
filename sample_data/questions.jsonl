@@ -1,0 +1,2 @@
+{"sample_id":"illustration:train:one","dataset":"gsm8k","split":"train","question":"A box holds three red balls and two blue balls. How many balls are there?","gold":"5"}
+{"sample_id":"illustration:test:one","dataset":"gsm8k","split":"test","question":"What is two plus two?","gold":"4"}
